@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2024-08-07 10:48:31</p>
+                <p class='attribute'><strong>Duration: </strong>22.23 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 1, Pass: 0, Error: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>__main__.LoginTest</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_05_get_discount_table_values_by_row</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=127.0.6533.89); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF72C54EEA2+31554]
+	(No symbol) [0x00007FF72C4C7ED9]
+	(No symbol) [0x00007FF72C38872A]
+	(No symbol) [0x00007FF72C39B4E7]
+	(No symbol) [0x00007FF72C39B84A]
+	(No symbol) [0x00007FF72C38F5BB]
+	(No symbol) [0x00007FF72C38D326]
+	(No symbol) [0x00007FF72C390EB1]
+	(No symbol) [0x00007FF72C390F50]
+	(No symbol) [0x00007FF72C3D7F6C]
+	(No symbol) [0x00007FF72C3D853C]
+	(No symbol) [0x00007FF72C3CBF6C]
+	(No symbol) [0x00007FF72C3FD06F]
+	(No symbol) [0x00007FF72C3CBA76]
+	(No symbol) [0x00007FF72C3FD240]
+	(No symbol) [0x00007FF72C41C977]
+	(No symbol) [0x00007FF72C3FCDD3]
+	(No symbol) [0x00007FF72C3CA33B]
+	(No symbol) [0x00007FF72C3CAED1]
+	GetHandleVerifier [0x00007FF72C858B1D+3217341]
+	GetHandleVerifier [0x00007FF72C8A5AE3+3532675]
+	GetHandleVerifier [0x00007FF72C89B0E0+3489152]
+	GetHandleVerifier [0x00007FF72C5FE776+750614]
+	(No symbol) [0x00007FF72C4D375F]
+	(No symbol) [0x00007FF72C4CEB14]
+	(No symbol) [0x00007FF72C4CECA2]
+	(No symbol) [0x00007FF72C4BE16F]
+	BaseThreadInitThunk [0x00007FFA9F59257D+29]
+	RtlUserThreadStart [0x00007FFAA0C6AA48+40]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\michaeljohn.roguel\Desktop\selenium_PracticeProject_commerce\Tests\login.py", line 84, in test_05_get_discount_table_values_by_row
+    homepage.get_discount_table_values()
+  File "C:\Users\michaeljohn.roguel\Desktop\selenium_PracticeProject_commerce\Pages\homePage.py", line 85, in get_discount_table_values
+    row = [item.text for item in tr.find_elements(By.XPATH, './/td')]
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\michaeljohn.roguel\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 439, in find_elements
+    return self._execute(Command.FIND_CHILD_ELEMENTS, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\michaeljohn.roguel\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 395, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\michaeljohn.roguel\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 354, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\michaeljohn.roguel\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=127.0.6533.89); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF72C54EEA2+31554]
+	(No symbol) [0x00007FF72C4C7ED9]
+	(No symbol) [0x00007FF72C38872A]
+	(No symbol) [0x00007FF72C39B4E7]
+	(No symbol) [0x00007FF72C39B84A]
+	(No symbol) [0x00007FF72C38F5BB]
+	(No symbol) [0x00007FF72C38D326]
+	(No symbol) [0x00007FF72C390EB1]
+	(No symbol) [0x00007FF72C390F50]
+	(No symbol) [0x00007FF72C3D7F6C]
+	(No symbol) [0x00007FF72C3D853C]
+	(No symbol) [0x00007FF72C3CBF6C]
+	(No symbol) [0x00007FF72C3FD06F]
+	(No symbol) [0x00007FF72C3CBA76]
+	(No symbol) [0x00007FF72C3FD240]
+	(No symbol) [0x00007FF72C41C977]
+	(No symbol) [0x00007FF72C3FCDD3]
+	(No symbol) [0x00007FF72C3CA33B]
+	(No symbol) [0x00007FF72C3CAED1]
+	GetHandleVerifier [0x00007FF72C858B1D+3217341]
+	GetHandleVerifier [0x00007FF72C8A5AE3+3532675]
+	GetHandleVerifier [0x00007FF72C89B0E0+3489152]
+	GetHandleVerifier [0x00007FF72C5FE776+750614]
+	(No symbol) [0x00007FF72C4D375F]
+	(No symbol) [0x00007FF72C4CEB14]
+	(No symbol) [0x00007FF72C4CECA2]
+	(No symbol) [0x00007FF72C4BE16F]
+	BaseThreadInitThunk [0x00007FFA9F59257D+29]
+	RtlUserThreadStart [0x00007FFAA0C6AA48+40]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 1, Pass: 0, Error: 1 -- Duration: 22.23 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html
